@@ -5,7 +5,7 @@ import { v4 as uuid } from 'uuid'
 async function createPost() {
     let wallet = await configureWallet()
     const contract = warp.contract(transactionId).connect(wallet)
-    await contract.writeInteractions({
+    await contract.writeInteraction({
         function: "createPost",
         post: {
             title: "Hi from first post!",
